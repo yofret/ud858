@@ -26,6 +26,7 @@ from models import Profile
 from models import ProfileMiniForm
 from models import ProfileForm
 from models import TeeShirtSize
+from models import Conference
 from models import ConferenceForm
 from models import ConferenceForms
 from models import ConferenceQueryForm
@@ -37,6 +38,28 @@ from settings import WEB_CLIENT_ID
 
 EMAIL_SCOPE = endpoints.EMAIL_SCOPE
 API_EXPLORER_CLIENT_ID = endpoints.API_EXPLORER_CLIENT_ID
+DEFAULTS = {
+    "city": "Default City",
+    "maxAttendees": 0,
+    "seatsAvailable": 0,
+    "topics": [ "Default", "Topic" ],
+}
+
+OPERATORS = {
+            'EQ':   '=',
+            'GT':   '>',
+            'GTEQ': '>=',
+            'LT':   '<',
+            'LTEQ': '<=',
+            'NE':   '!='
+            }
+
+FIELDS =    {
+            'CITY': 'city',
+            'TOPIC': 'topics',
+            'MONTH': 'month',
+            'MAX_ATTENDEES': 'maxAttendees',
+            }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
